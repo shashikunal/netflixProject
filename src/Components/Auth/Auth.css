@@ -1,0 +1,59 @@
+#AuthBlock {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#AuthBlock article {
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  height: 100vh;
+}
+
+#AuthBlock article main {
+  background: #000;
+  height: 400px;
+  width: 35%;
+  padding: 30px 50px;
+}
+
+#AuthBlock article main form {
+  display: flex;
+  flex-direction: column;
+}
+
+#AuthBlock article main h2 {
+  font-size: 30px;
+  color: #fff;
+  padding: 10px;
+}
+
+#AuthBlock article main form input {
+  width: 100%;
+  background-color: #333;
+  border: 1px solid #333;
+  padding: 13px;
+  border-radius: 3px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+#AuthBlock article main form button {
+  width: 100%;
+  display: block;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  margin: 20px 0;
+}
+::placeholder {
+  color: #fff;
+}

@@ -1,0 +1,21 @@
+.rightNavbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.rightNavbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.rightNavbar ul li:last-child a {
+  color: #fff;
+  background-color: red;
+  padding: 4px 20px;
+  border-radius: 5px;
+}
+
+.rightNavbar ul li a i {
+  margin: 7px 4px;
+}

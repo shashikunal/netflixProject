@@ -5,3 +5,42 @@
   position: fixed;
   top: 0;
 }
+
+.videoDesc {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 50vh;
+  justify-content: end;
+  padding: 10px;
+  margin: 52px;
+  color: #fff;
+}
+
+.videoDesc button {
+  padding: 15px 40px;
+  margin: 20px 27px 20px 0px;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.videoDesc button:nth-child(1) {
+  background-color: #fff;
+}
+.videoDesc button:nth-child(2) {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.videoDesc span button i {
+  padding: 0px 12px 0 0;
+  font-size: 20px;
+}
+button:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
