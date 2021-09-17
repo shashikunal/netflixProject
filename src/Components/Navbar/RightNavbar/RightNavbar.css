@@ -19,3 +19,9 @@
 .rightNavbar ul li a i {
   margin: 7px 4px;
 }
+
+.profilePic {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
