@@ -1,0 +1,57 @@
+#UserProfile article {
+  display: flex;
+  width: 80%;
+  margin: 10px auto;
+  background: #99999924;
+  height: 70vh;
+  padding: 10px;
+  box-shadow: 1px 1px 4px 1px #9999993b;
+}
+
+.profile_sidebar {
+  flex-basis: 25%;
+  padding: 10px;
+  border-right: 2px solid #ff00005e;
+}
+
+.profile_main {
+  flex-basis: 75%;
+  padding: 10px;
+}
+
+.profile_sidebar figure {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.profile_sidebar figure img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.profile_sidebar main {
+  text-align: center;
+  font-size: 14px;
+}
+
+.profile_sidebar strong span {
+  position: absolute;
+  left: 87px;
+  font-size: 12px;
+  background: #fff;
+  display: flex;
+  z-index: 1;
+  border: 1px solid #fff;
+  width: 58px;
+  color: #e91e63;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.profile_sidebar strong span i {
+  margin: 2px;
+}

@@ -11,6 +11,7 @@ import AuthProvider from "./ContextApi/AuthContext";
 import UserProfile from "./Components/Profiles/UserProfile";
 import ProtectedRoute from "./Helpers/ProtectedRoute";
 import PublicRoute from "./Helpers/PublicRoute";
+import ProfilePhoto from "./Components/Profiles/ProfilePhoto";
 const App = () => {
   console.log(Test);
   return (
@@ -19,7 +20,6 @@ const App = () => {
         <AuthProvider>
           <Router>
             <Navbar />
-
             <ToastContainer />
             <Switch>
               <Route path="/" exact>
@@ -31,6 +31,10 @@ const App = () => {
               <PublicRoute path="/signup" exact>
                 <Register />
               </PublicRoute>
+
+              <ProtectedRoute path="/upload-profile-pic" exact>
+                <ProfilePhoto />
+              </ProtectedRoute>
 
               <ProtectedRoute path="/profile" exact>
                 <UserProfile />
