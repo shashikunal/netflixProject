@@ -7,7 +7,7 @@ let AuthProvider = ({ children }) => {
 
   useEffect(() => {
     return firebase.auth().onAuthStateChanged(user => {
-      if (user.emailVerified === true) {
+      if (user.emailVerified === true || user.reauthenticateWithPhoneNumber) {
         console.log("Auth user");
         setUSER(user);
       } else {

@@ -55,3 +55,13 @@
 .profile_sidebar strong span i {
   margin: 2px;
 }
+
+progress[value] {
+  width: 95%;
+  background: red;
+}
+.progressBlock {
+  display: block;
+  position: relative;
+  top: 43px;
+}

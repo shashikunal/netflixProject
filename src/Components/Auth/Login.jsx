@@ -4,6 +4,16 @@ import { Link, withRouter } from "react-router-dom";
 import firebase from "../../firebase";
 import { toast } from "react-toastify";
 
+let Styles = {
+  color: "#fff",
+  textDecoration: "none",
+  background: "#607d8b91",
+  padding: "2px 20px",
+  fontSize: "12px",
+  width: "100%",
+  display: "block",
+};
+
 const Login = ({ history }) => {
   let [state, setState] = useState({
     email: "",
@@ -44,6 +54,15 @@ const Login = ({ history }) => {
     <section id="AuthBlock" style={{ background: `url(images/poster.jpg)` }}>
       <article>
         <main>
+          <aside className="orBlock">
+            <h5 style={{ color: "red" }}>Sign with Phone number</h5>
+            <Link to="/otp" className="otpLink">
+              Request OTP
+            </Link>
+
+            <p className="or">OR</p>
+          </aside>
+
           <h2>Sign in</h2>
           <form onSubmit={handleSubmit}>
             <input
@@ -83,6 +102,9 @@ const Login = ({ history }) => {
                 </div>
                 <div>
                   New to Netflix ?<Link to="/signup">Sign up now</Link>
+                  <Link to="/forgot-password" style={Styles}>
+                    Forgot Password
+                  </Link>
                   <p>
                     This page is protected by Google reCAPTCHA to ensure you're
                     not a bot. Learn more.

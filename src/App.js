@@ -12,6 +12,8 @@ import UserProfile from "./Components/Profiles/UserProfile";
 import ProtectedRoute from "./Helpers/ProtectedRoute";
 import PublicRoute from "./Helpers/PublicRoute";
 import ProfilePhoto from "./Components/Profiles/ProfilePhoto";
+import ForgotPassword from "./Components/Auth/ForgotPassword";
+import PhoneAuth from "./Components/Auth/PhoneAuth";
 const App = () => {
   console.log(Test);
   return (
@@ -30,6 +32,12 @@ const App = () => {
               </PublicRoute>
               <PublicRoute path="/signup" exact>
                 <Register />
+              </PublicRoute>
+              <PublicRoute path="/forgot-password" exact>
+                <ForgotPassword />
+              </PublicRoute>
+              <PublicRoute path="/otp" exact>
+                <PhoneAuth />
               </PublicRoute>
 
               <ProtectedRoute path="/upload-profile-pic" exact>
