@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../../ContextApi/AuthContext";
 const LeftNavbar = () => {
   let USER = useContext(AuthContext);
@@ -9,7 +10,7 @@ const LeftNavbar = () => {
         <img src="netflix-logo.png" alt="logo" />
       </div>
       <div className="leftMenuBlock">
-        {USER  ? (
+        {USER ? (
           <Fragment>
             <ul>
               <li>
@@ -20,6 +21,9 @@ const LeftNavbar = () => {
               </li>
               <li>
                 <a href="/">Movies</a>
+              </li>
+              <li>
+                <Link to="/upload-movie">Upload Movie</Link>
               </li>
               <li>
                 <a href="/">New&popular</a>

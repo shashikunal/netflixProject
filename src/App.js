@@ -14,6 +14,9 @@ import PublicRoute from "./Helpers/PublicRoute";
 import ProfilePhoto from "./Components/Profiles/ProfilePhoto";
 import ForgotPassword from "./Components/Auth/ForgotPassword";
 import PhoneAuth from "./Components/Auth/PhoneAuth";
+import AddMovie from "./Components/Movies/AddMovie";
+import MovieProvider from "./ContextApi/MovieContext";
+
 const App = () => {
   console.log(Test);
   return (
@@ -25,8 +28,11 @@ const App = () => {
             <ToastContainer />
             <Switch>
               <Route path="/" exact>
-                <HomePage />
+                <MovieProvider>
+                  <HomePage />
+                </MovieProvider>
               </Route>
+
               <PublicRoute path="/signin" exact>
                 <Login />
               </PublicRoute>
@@ -44,6 +50,9 @@ const App = () => {
                 <ProfilePhoto />
               </ProtectedRoute>
 
+              <ProtectedRoute path="/upload-movie" exact>
+                <AddMovie />
+              </ProtectedRoute>
               <ProtectedRoute path="/profile" exact>
                 <UserProfile />
               </ProtectedRoute>
