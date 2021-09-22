@@ -6,7 +6,7 @@ import PreLoadedVideo from "./../Components/Slider/PreLoadedVideo";
 const HomePage = () => {
   return (
     <Fragment>
-      {/* <PreLoadedVideo /> */}
+      <PreLoadedVideo />
       <ListMovies />
     </Fragment>
   );

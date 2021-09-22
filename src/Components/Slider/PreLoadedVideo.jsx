@@ -1,9 +1,22 @@
-import React, { useRef, useState } from "react";
+import React, {
+  useRef,
+  useState,
+  useContext,
+  useEffect,
+  Fragment,
+} from "react";
 import "./slider.css";
+import { MovieContext } from "./../../ContextApi/MovieContext";
+import Spinner from "./../Spinner/Spinner";
+
 const PreLoadedVideo = () => {
+  let MOVIES = useContext(MovieContext);
+
   let videoRef = useRef(null);
   let [Play, setPlay] = useState(true);
   let [videoIcon, setVideoIcon] = useState(<i className="fas fa-play"></i>);
+
+  console.log(MOVIES);
 
   let MakePlayOrPause = () => {
     setPlay(!Play);
@@ -12,7 +25,8 @@ const PreLoadedVideo = () => {
       ? setVideoIcon(<i className="fas fa-pause"></i>)
       : setVideoIcon(<i className="fas fa-play"></i>);
   };
-  return (
+
+  let VIDEOBLOCK = () => (
     <section id="preLoadedBlock">
       <article>
         <aside className="videoDesc">
@@ -35,7 +49,7 @@ const PreLoadedVideo = () => {
         </aside>
         <video
           onClick={MakePlayOrPause}
-          src="video/BreakingBad.mp4"
+          src={MOVIES[0].movie_video}
           autoPlay
           loop
           muted
@@ -43,6 +57,9 @@ const PreLoadedVideo = () => {
         ></video>
       </article>
     </section>
+  );
+  return (
+    <Fragment>{MOVIES.length > 0 ? <VIDEOBLOCK /> : <Spinner />}</Fragment>
   );
 };
 

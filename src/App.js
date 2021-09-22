@@ -16,6 +16,8 @@ import ForgotPassword from "./Components/Auth/ForgotPassword";
 import PhoneAuth from "./Components/Auth/PhoneAuth";
 import AddMovie from "./Components/Movies/AddMovie";
 import MovieProvider from "./ContextApi/MovieContext";
+import VideoPlayer from "./Components/Movies/VideoPlayer";
+import Movie from "./Components/Movies/Movie";
 
 const App = () => {
   console.log(Test);
@@ -53,8 +55,20 @@ const App = () => {
               <ProtectedRoute path="/upload-movie" exact>
                 <AddMovie />
               </ProtectedRoute>
+
               <ProtectedRoute path="/profile" exact>
                 <UserProfile />
+              </ProtectedRoute>
+
+              <ProtectedRoute
+                path={`/movies-details/:movie_name/:movie_id`}
+                exact
+              >
+                <Movie />
+              </ProtectedRoute>
+
+              <ProtectedRoute path={`/movies/:movie_name/:movie_id`} exact>
+                <VideoPlayer />
               </ProtectedRoute>
             </Switch>
           </Router>
